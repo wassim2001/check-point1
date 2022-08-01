@@ -1,0 +1,52 @@
+ALGORITHM task1
+VAR
+INTEGER :numVoy:=0;
+INTEGER :numWord:=1;
+STRING tab:=[];
+BEGIN
+ Read(tab)
+FOR i FROM 0 TO tab.length-1 STEP 1 DO
+
+    IF(tab[i]='a' OR tab[i]='e' OR tab[i]='i' OR tab[i]='o' OR tab[i]='u' OR tab[i]='y' ) THEN
+    numVoy :=numVoy+1;
+    END_IF
+    
+    IF(tab[i]=' ') DO
+        numWord :=numWord+1;
+    END_IF
+
+
+ Write(numVoy)
+ Write(numWord)
+END
+
+
+ALGORITHM task2
+VAR
+INTEGER sum:=0;
+INTEGER set1:=[];
+INTEGER set2:=[];
+BEGIN
+ Read(tab)
+
+FOR i FROM 0 TO set1.length-1 STEP 1 DO
+    FOR j FROM 0 TO set2.length-1 STEP 1 DO
+        IF set1[i]==set2[j]
+           Break;
+           sum=sum+set1[i]
+        END_IF
+    END_FOR
+END_FOR
+
+FOR j FROM 0 TO set2.length-1 STEP 1 DO
+    FOR j FROM 0 TO set1.length-1 STEP 1 DO
+        IF set2[j]==set1[i]
+           Break;
+           sum=sum+set2[i]
+        END_IF
+    END_FOR
+END_FOR
+
+ Write(sum)
+END
+
