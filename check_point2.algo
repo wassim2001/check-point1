@@ -1,0 +1,45 @@
+ALGORITHM Dot_product
+VAR
+    U,V : ARRAY_OF INTEGER[];
+BEGIN
+    
+Produit_scalaire(U,V)
+END
+
+PROCEDURE Produit_scalaire(U,V:ARRAY_OF INTEGER[] )
+VAR
+    P : INTEGER:=0;
+BEGIN
+    Read(U[0])
+    Read(U[1])
+    Read(V[0])
+    Read(V[1])
+
+    P= U[0]*V[0] + U[1]*V[1] ;
+    IF(P=0)
+    Write(ORTHOGONAL)
+    ELSE 
+    Write(not ORTHOGONAL)
+    END_IF
+END
+
+/* task2*/
+
+ALGORITHM Insertion_sort
+VAR
+i,j : INTEGER;
+numbers : ARRAY_OF INTEGER[];
+
+BEGIN
+
+FOR i FROM 0 TO numbers.length STEP 1 DO
+    i=j
+    current=numbers[i]
+    WHILE (j<n AND numbers[j]<numbers[j-1]) DO
+        numbers[j]=numbers[j-1]
+        j = j-1;
+        numbers[j] = current
+    END_WHILE
+
+
+END
